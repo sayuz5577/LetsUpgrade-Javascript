@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program to print to get the current date and time</title>
+</head>
+
+<body>
+    <script>
+        var today = new Date();
+        var tt = new Date();
+
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        var hours = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        if (hours > 12) {
+            hours = hours + 'PM';
+        } else if (hours < 12 && hours > 0) {
+            hours = hours + 'AM';
+        }
+
+        var dayofWeek = weekday[today.getDay()];
+        document.write("<p> Today is :" + dayofWeek + "\n" + "</p>");
+        //today = mm + '-' + dd + '-' + yyyy; //Alternative for the format of date 
+        today = dd + '/' + mm + '/' + yyyy;
+        document.write("<p> Today's Date is: " + today + "\n" + "</p>");
+        //document.write("<p> Today's Date is: " + mm +"/"+ dd +"/"+ yyyy + "\n" + "</p>"); //Alternative for above method
+        tt = hours + ':' + min + ':' + sec;
+        document.write("\n\n\n");
+        document.write("Current time is" + ':' + tt);
+
+    </script>
+
+</body>
+
+</html>
