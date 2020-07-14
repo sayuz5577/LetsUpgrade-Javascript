@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 Assignment</title>
+</head>
+
+<body>
+
+    <h3>Q1.Explore and Explain various Console function. Explain them?</h3>
+    <p> In javascript, the console is an object which provides access to the browser debugging console. <br>
+        The console object provides us with several different methods, like : <br>
+        <br>
+        1.log() <br>
+        2.error() <br>
+        3.warn() <br>
+        4.clear() <br>
+        5.time() and timeEnd() <br>
+        6.table() <br>
+        7.count() <br> </p>
+    <script>
+        /* In javascript, the console is an object which provides access to the browser debugging console.
+        The console object provides us with several different methods, like :
+
+        1.log()
+        2.error()
+        3.warn()
+        4.clear()
+        5.time() and timeEnd()
+        6.table()
+        7.count()   */
+
+        //1.console.log() - Mainly used to log(print) the output to the console. We can put any type inside the log(), be it a string, array, object, boolean etc.
+        console.log('abc');//prints string in the console. 
+        console.log(1); // prints number in the console.
+        console.log(true); // prints boolean in the console.
+        console.log(null); // prints null in console,means that if there was a variable that points to null.
+        console.log(undefined); // prints undefined when the variableis not defined it shows undefined in console.
+        console.log([1, 2, 3, 4]); // prints the array in the console.
+        console.log({ a: 1, b: 2, c: 3 }); // prints the objects in console.
+
+        //2.console.error() - Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.
+        console.error('This is a simple error');
+
+        //3.console.warn() - Used to log warning message to the console. By default the warning message will be highlighted with yellow color.
+        console.warn('This is a warning.');
+
+        /* 4.console.clear() - Used to clear the console. The console will be cleared, in case of Chrome a simple overlayed text will be printed like : ‘Console was cleared’ while in firefox no message is returned.
+        console.clear(); */
+
+        /* 5.console.time() and console.timeEnd() -Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object. They take a label which must be same, and the code inside can be anything( function, object, simple console). */
+        console.time('abc');
+        let fun = function () {
+            console.log('fun is running');
+        }
+        let fun2 = function () {
+            console.log('fun2 is running..');
+        }
+        fun(); // calling fun(); 
+        fun2(); // calling fun2(); 
+        console.timeEnd('abc');
+
+        //6.console.table() - This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.
+        console.table({ 'a': 1, 'b': 2 });
+
+        //7.console.count() - This method is used to count the number that the function hit by this counting method.
+        for (let i = 0; i < 5; i++) {
+            console.count(i);
+        }
+
+
+    </script>
+    <hr>
+
+    <h3>Q2.Difference Between let,var and const? </h3>
+    <p>Var:<br>
+        The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of
+        that variable. <br>
+        Example: var a =10;
+        <li>Variable declarations are processed before the execution of the code.</li>
+        <li>The scope of a JavaScript variable declared with var is its current execution context.</li>
+        <li>The scope of a JavaScript variable declared outside the function is global.</li>
+    </p>
+    <script>
+        var a = 10;
+        var a = 20;
+        console.log("The value of var a is :", a); 
+    </script>
+
+    <p>Let: <br>
+        The let statement declares a local variable in a block scope. It is similar to var, in that we can optionally
+        initialize the variable. <br>
+
+        Example: let a =10;
+        <li>The let statement allows you to create a variable with the scope limited to the block on which it is used.
+        </li>
+        <li>It is similar to the variable we declare in other languages like Java, .NET, etc.</li>
+    </p>
+    <script>
+        let b = 10;
+        //let a = 20; //throws syntax error
+        console.log("The value of let b is :", b);
+    </script>
+
+    <p>Const: <br>
+        const statement values can be assigned once and they cannot be reassigned. The scope of const statement works
+        similar to let statements. <br>
+        Example: const a =10;
+    </p>
+    <script>
+        const MY_VARIABLE = 10;
+        console.log("The Value of Const is :", MY_VARIABLE);  //output 10
+        MY_VARIABLE = 20;           //throws type error
+        console.log(MY_VARIABLE);
+
+    </script>
+    <hr>
+
+
+    <h3>Q3.Explain Datatypes in JavaScript?</h3>
+    <p>JavaScript variables can hold many data types: numbers, strings, objects and more: <br></p>
+    <p>String: <br>
+        <li>A string (or a text string) is a series of characters like "John Doe". </li> <br>
+        <li>Strings are written with quotes. You can use single or double quotes: </li> <br>
+        <li>Example: var carName1 = "Volvo XC60"; </li>
+    </p>
+
+    <p>Number: <br>
+        <li>JavaScript has only one type of numbers.</li>
+        <li>Numbers can be written with, or without decimals.</li>
+        <li>Example: var x1 = 34.00; </li>
+    </p>
+
+    <p>Booleans: <br>
+        <li>Booleans can only have two values: true or false.</li>
+    <p>Exampls:
+        var x = 5; <br>
+        var y = 5; <br>
+        var z = 6; <br>
+        (x == y) Returns True <br>
+        (x == z) Returns False <br>
+    </p>
+    </p>
+
+    <p>Arrays: <br>
+        <li>JavaScript arrays are written with square brackets.</li>
+        <li>Array items are separated by commas.</li>
+        <li>The following code declares (creates) an array called cars, containing three items (car names):</li>
+        <li>Example : var cars =["Saab","Volvo","BMW"]; </li>
+    </p>
+
+    <p> Objects: <br>
+        <li>JavaScript objects are written with curly braces {}.</li>
+        <li>Object properties are written as name:value pairs, separated by commas.</li>
+        <li>Example : <br> var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</li>
+
+    </p>
+
+    <script>
+        //Strings are defined as:
+        var answer1 = "It's alright";             // Single quote inside double quotes
+        var answer2 = "He is called 'Johnny'";    // Single quotes inside double quotes
+        var answer3 = 'He is called "Johnny"';    // Double quotes inside single quotes
+        console.log("The string is :",answer2);
+
+        //Numbers are defined as:
+        var x1 = 34.64;     // Written with decimals
+        var x2 = 34;        // Written without decimals
+        console.log("The NUmbers are :", x1);
+
+        //Booleans are defined as:
+        var x = 5;
+        var y = 5; 
+        var z = 6; 
+        console.log(x == y);
+        console.log(x == z);
+
+        //Arrays are defined as:
+        var cars = ["Saab", "Volvo", "BMW"];
+        console.log("The Array is :" ,cars);
+
+        //Objects are defined as:
+        var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+        console.log("The Objects is defined as :",person)
+
+
+    </script>
+
+
+</body>
+
+</html>
