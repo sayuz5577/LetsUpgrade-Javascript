@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 Assignment</title>
+    <style>
+        .points{
+            color: deepskyblue;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <div class="q1" style="background-color: black; color: bisque;">
+        <h3 style="color: greenyellow;">Q1.Taking inputs from user and logging it in the console.</h3>
+        <script>
+            let name = prompt("Please Enter your name", "<name goes here>");
+            console.log(name);
+            document.write("Hello " + name + "! How are you Today?");
+        </script>
+    </div>
+    <hr style="border: 2px solid white;">
+
+    <div class="q2" style="background-color: black; color: bisque; ">
+        <h3 style="color: greenyellow;">Q2. Explain with Methods of String and Array?</h3>
+        <h4 style="color: chocolate;">Array Methods:</h4>
+        <li class="points">Array copyWithin() method:</li>
+        <p>The copyWithin() method copies array elements to another position in the array, overwriting the existing
+            values.</p>
+        <p>This method will never add more items to the array.</p>
+        <p>Syntax :</p>
+        <p>array.copyWithin(target, start, end)</p>
+        <p>Example:</p>
+        <p>var fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];</p>
+        <p>fruits.copyWithin(2, 0, 2);</p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
+            fruits.copyWithin(2, 0, 2);
+            console.log(fruits);
+        </script>
+        <hr style="border: 1px dotted white;">
+
+        <li class="points">Array entries() Method:</li>
+        <p>The entries() method returns an Array Iterator object with key/value pairs.</p>
+        <p>For each item in the original array, the new iteration object will contain an array with the index as the
+            key.</p>
+        <p>Syntax :</p>
+        <p>array.entries()</p>
+        <p>Example:</p>
+        <p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <p id="demo">var f = fruits.entries();</p>
+        <p>for (x of f) {</p>
+        <p>document.getElementById("demo").innerHTML += x;}</p>
+        <hr style="border: 1px dotted white;">
+
+        <li class="points">Array everys() Method:</li>
+        <p>The every() method checks if all elements in an array pass a test (provided as a function).</p>
+        <p>The every() method executes the function once for each element present in the array:</p>
+        <li style="list-style: square;">If it finds an array element where the function returns a false value, every()
+            returns false (and does not check the remaining values)</li>
+        <li style="list-style: square;">If no false occur, every() returns true
+        </li>
+        <p>Syntax :</p>
+        <p>array.every(function(currentValue, index, arr), thisValue)</p>
+        <p>Example:</p>
+        <p>var ages = [32, 33, 16, 40];</p>
+        <p>function checkAdult(age) {</p>
+        <p>return age >= 18;
+            }</p>
+        <p>function myFunction() {</p>
+        <p>document.getElementById("demo").innerHTML = ages.every(checkAdult);}</p>
+        <hr style="border: 1px dotted white;">
+
+        <li class="points">Array fill() Method:</li>
+        <p>The fill() method fills the specified elements in an array with a static value.</p>
+        <p>You can specify the position of where to start and end the filling. If not specified, all elements will be filled.</p>
+        <p>Syntax :</p>
+        <p>array.fill(value, start, end)</p>
+        <p>Example : Fill the last two array elements with a static value:</p>
+        <p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <p>fruits.fill("Kiwi", 2, 4);</p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.fill("kiwi",0,4);
+            console.log(fruits);
+        </script>  
+        <hr style="border: 1px dotted white;"> 
+
+
+        <li class="points">Array find() Method:</li>
+        <p>The find() method returns the value of the first element in an array that pass a test (provided as a function).</p>
+        <p>The find() method executes the function once for each element present in the array:</p>
+            <li style="list-style: square;">If it finds an array element where the function returns a true value, find() returns the value of that array element (and does not check the remaining values)</li>
+            <li style="list-style: square;">Otherwise it returns undefined</li>
+        <p>Syntax :</p>
+        <p>array.find(function(currentValue, index, arr),thisValue)</p>
+        <p>Example: Get the value of the first element in the array that has a value of 18 or more:</p>
+        <p>var ages = [3, 10, 18, 20];</p>
+        <p>function checkAdult(age) { </p>
+        <p>return age >= 18;}</p>
+        <p>function myFunction() {</p>
+        <p>document.getElementById("demo").innerHTML = ages.find(checkAdult);}</p>
+        <hr style="border: 1px dotted white;">
+
+        <li class="points">Array join() Method:</li>
+        <p>The join() method returns the array as a string.</p>
+        <p>The elements will be separated by a specified separator. The default separator is comma (,).</p>
+        <p>Syntax :</p>
+        <p>array.join(separator)</p>
+        <p>Example: Convert the elements of an array into a string: </p>
+        <p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <p>var energy = fruits.join();</p>
+        <hr style="border: 1px dotted white;">
+        
+        <h4 style="color: chocolate;">String Methods:</h4>
+        <li class="points">String charCodeAt() Method:</li>
+        <p>The charCodeAt() method returns the Unicode of the character at the specified index in a string.</p>
+        <p>The index of the first character is 0, the second character 1, and so on.</p>
+        <p>Syntax :</p>
+        <p>string.charCodeAt(index)</p>
+        <p>Example-Return the Unicode of the first character in a string (the Unicode value for "H"):</p>
+        <p>var str = "HELLO WORLD"; </p>
+        <p>var n = str.charCodeAt(0); </p>
+        <hr style="border: 1px dotted white;">
+        
+        <li class="points">String includes() Method:</li>
+        <p>The includes() method determines whether a string contains the characters of a specified string.</p>
+        <p>This method returns true if the string contains the characters, and false if not.</p>
+        <p>Syntax :</p>
+        <p>string.includes(searchvalue, start)</p>
+        <p>Example - Check if a string includes "world":</p>
+        <p>var str = "Hello world, welcome to the universe.";</p>
+        <p>var n = str.includes("world");</p>
+        <hr style="border: 1px dotted white;">
+
+        <li class="points">String repeat() method:</li>
+        <p>The repeat() method returns a new string with a specified number of copies of the string it was called on.</p>
+        <p>Syntax:</p>
+        <p>string.repeat(count)</p>
+        <p>Example - Make a new string by copying a string twice:</p>
+        <p>var str = "Hello world!";</p>
+        <p>str.repeat(2);</p>
+        <hr style="border: 1px dotted white;">
+
+        <li class="points">String replace() Method:</li>
+        <p>The replace() method searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.</p>
+        <p>Syntax :</p>
+        <p>string.replace(searchvalue, newvalue)</p>
+        <p>Example - Return a string where "Microsoft" is replaced with "LetsUpgrade":</p>
+        <p>var str = "Visit Microsoft!";</p>
+        <p>var res = str.replace("Microsoft", "W3Schools");</p>
+        <hr style="border: 1px dotted white;">
+
+        <li class="points">String trim() Method:</li>
+        <p>The trim() method removes whitespace from both sides of a string.</p>
+        <p>Syntax:</p>
+        <p>string.trim()</p>
+        <p>Example - Remove whitespace from both sides of a string:</p>
+        <p>var str = " &nbsp;       Hello World!      &nbsp;  ";</p>
+        <p>alert(str.trim());</p>
+        <hr style="border: 1px dotted white;">
+        <br>
+
+    </div>
+
+    <hr style="border: 2px solid white;">
+
+    <div class="q1" style="background-color: black; color: bisque;">
+        <h3 style="color: greenyellow;">Q3.What is Your Age?</h3>
+        <script defer>
+            let age = prompt("What is your age ?", "Enter your age here");
+            console.log(age);
+            if (age >= 21) {
+                document.write("You are eligible to drink as you are above " + age + ".");
+            }else{
+                document.write("sorry!You are not Eligible to drink.")
+            }
+        </script>
+    </div>
+</body>
+
+</html>s
