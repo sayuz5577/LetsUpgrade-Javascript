@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Assignment</title>
+    <script>
+        function sepSpace(){
+            var info = document.getElementById('detail').value;
+            let arr = {};
+            arr = info.split(' ');
+            console.log(arr);
+            document.getElementById('result').innerHTML = 'The OS name is ' + arr[0] + ' and version is ' +arr[1];
+        }
+    </script>
+</head>
+<body>
+    <h4>Please Enter the Name of Your OS and Version</h4>
+    <form method="POST">
+        <input type="text" id="detail" placeholder="OSName version">
+        <input type="button" value="Submit" id="submit" onclick="sepSpace()">
+        <div style="margin-top: 10px;" id="result"></div>
+    </form>
+</body>
+</html>

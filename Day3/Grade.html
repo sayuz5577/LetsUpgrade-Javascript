@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Assignment</title>
+    <script>
+        /* function Report(){
+             var marks = document.getElementById('mark').value;
+             let grade;
+             if(marks >= 90){
+                 grade = "A+"
+                 document.getElementById('result').innerHTML= 'Marks are ' + marks + ' and grade is ' + grade; 
+             }else if(marks<90 && marks >= 80){
+                 grade = "A"
+                 document.getElementById('result').innerHTML= 'Marks are ' + marks + ' and grade is ' + grade;
+             }else if(marks<80 && marks>=70){
+                 grade = "B+"
+                 document.getElementById('result').innerHTML= 'Marks are ' + marks + ' and grade is ' + grade;
+             }else if(marks<70 && marks>=60){
+                 grade = "B"
+                 document.getElementById('result').innerHTML= 'Marks are ' + marks + ' and grade is ' + grade;
+             }else if(marks<60 && marks >= 50){
+                 grade = "C"
+                 document.getElementById('result').innerHTML= 'Marks are ' + marks + ' and grade is ' + grade;
+             }else if(marks<50 && marks >=40){
+                 grade = "D"
+                 document.getElementById('result').innerHTML= 'Marks are ' + marks + ' and grade is ' + grade;
+             }else if(marks<40 && marks>=35){
+                 grade = "E"
+                 document.getElementById('result').innerHTML= 'Marks are ' + marks + ' and grade is ' + grade;
+             }else{
+                 grade = 'F'
+                 document.getElementById('result').innerht = 'Sorry you are Fail!!'
+             }
+         }*/
+        function Report() {
+            let marks = document.getElementById('mark').value;
+            result = marks / 10;
+            console.log(result);
+            let grade;
+            switch (result) {
+                case 10:
+                    grade = "A+"
+                    document.getElementById('result').innerHTML = 'Marks are ' + marks + ' and grade is ' + grade;
+                break;
+
+                case 9:
+                    grade = "A"
+                    document.getElementById('result').innerHTML = 'Marks are ' + marks + ' and grade is ' + grade;
+                break;
+                case 8:
+                    grade = "B+"
+                    document.getElementById('result').innerHTML = 'Marks are ' + marks + ' and grade is ' + grade;
+                break;
+                case 7:
+                    grade = "B"
+                    document.getElementById('result').innerHTML = 'Marks are ' + marks + ' and grade is ' + grade;
+                break;
+                case 6:
+                    grade = "C"
+                    document.getElementById('result').innerHTML = 'Marks are ' + marks + ' and grade is ' + grade;
+                break;
+                case 5:
+                    grade = "D"
+                    document.getElementById('result').innerHTML = 'Marks are ' + marks + ' and grade is ' + grade;
+                break;
+                default:
+                    grade = "E"
+                    document.getElementById('result').innerHTML = 'Sorry you are Fail!!';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Program to Chech the Grade of the Student</h2>
+    <form method="POST">
+        <label style="cursor: pointer;" for="mark">Enter Your Marks :</label>
+        <input type="number" name="" id="mark" placeholder="Please Enter Your marks">
+        <input type="button" value="Submit" id="submit" onclick="Report()">
+        <div style="margin-top: 10px;" id="result"></div>
+    </form>
+
+</body>
+
+</html>
