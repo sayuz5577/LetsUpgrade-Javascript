@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment</title>
+</head>
+
+<body>
+    <h3></h3>
+    <script>
+        for (var x = 1; x <= 100; x++) {
+            if (x % 3==0 && x % 5==0) {
+                document.write(x,"fizzbuzz");
+                document.write('\n');
+            }else {
+                if (x % 3 == 0) {
+                    document.write(x,"fizz");
+                }document.write('\n');
+                if (x % 5 == 0) {
+                    document.write(x,"buzz");
+                }document.write('\n');
+            }
+            document.write('\n'); //line breaks to enhance output readability
+        }
+    </script>
+</body>
+
+</html>
